@@ -3,29 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- 🔧 TEXTE SEO : Titre de la page (onglet navigateur + Google) -->
 <title>Site internet professionnel à 99€ — Sans abonnement, en ligne en 72h</title>
-<meta name="description" content="Votre site internet professionnel pour 99€, paiement unique, sans abonnement. Livré en 72h, hébergement et nom de domaine offerts 1 an.">
+
+<!-- 🔧 TEXTE SEO : Description (résultat Google) -->
+<meta name="description" content="Votre site internet professionnel pour 99€, paiement unique, sans abonnement. Livré en 72h.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- 🔧 POLICES : Changer les polices Google Fonts ici si besoin -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
-  /* ===== VARIABLES ===== */
+  /* ===== VARIABLES DE COULEURS (TOUT LE SITE) ===== */
+  /* 🔧 COULEURS : Modifiez ici les couleurs principales du site */
   :root {
-    --bleu: #1E5EFF;
-    --bleu-vif: #0066FF;
-    --bleu-fonce: #0A1B3D;
-    --bleu-nuit: #0D1F4C;
-    --bleu-clair: #EAF1FF;
-    --bleu-clair-2: #F5F8FF;
-    --blanc: #FFFFFF;
-    --gris: #6B7A99;
-    --gris-clair: #C9D5F0;
-    --ombre-bleue: 0 20px 40px -12px rgba(30, 94, 255, 0.25);
-    --ombre-douce: 0 4px 20px rgba(10, 27, 61, 0.06);
-    --radius: 10px;
-    --radius-lg: 16px;
-    --ff-titre: 'Poppins', sans-serif;
-    --ff-texte: 'Inter', sans-serif;
+    --bleu: #1E5EFF;           /* 🔧 COULEUR : Bleu principal */
+    --bleu-vif: #0066FF;        /* 🔧 COULEUR : Bleu vif (boutons, accents) */
+    --bleu-fonce: #0A1B3D;      /* 🔧 COULEUR : Bleu foncé (textes titres) */
+    --bleu-nuit: #0D1F4C;       /* 🔧 COULEUR : Bleu nuit (footer) */
+    --bleu-clair: #EAF1FF;      /* 🔧 COULEUR : Bleu clair (fonds sections) */
+    --bleu-clair-2: #F5F8FF;    /* 🔧 COULEUR : Bleu très clair (hero) */
+    --blanc: #FFFFFF;           /* 🔧 COULEUR : Blanc */
+    --gris: #6B7A99;            /* 🔧 COULEUR : Gris textes secondaires */
+    --gris-clair: #C9D5F0;      /* 🔧 COULEUR : Gris clair (bordures) */
+    --ombre-bleue: 0 20px 40px -12px rgba(30, 94, 255, 0.25); /* 🔧 OMBRE */
+    --ombre-douce: 0 4px 20px rgba(10, 27, 61, 0.06);         /* 🔧 OMBRE */
+    --radius: 10px;             /* 🔧 FORME : Arrondi des boutons */
+    --radius-lg: 16px;          /* 🔧 FORME : Arrondi des cartes */
+    --ff-titre: 'Poppins', sans-serif;  /* 🔧 POLICE : Titres */
+    --ff-texte: 'Inter', sans-serif;    /* 🔧 POLICE : Textes */
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -337,6 +346,7 @@
     text-align: center;
     padding: 12px;
   }
+  /* 🔧 COULEURS GRADIENTS RÉALISATIONS : Modifier les dégradés ici */
   .real-visuel.v1 { background: linear-gradient(135deg, #1E5EFF, #0A1B3D); }
   .real-visuel.v2 { background: linear-gradient(135deg, #0066FF, #4B8BFF); }
   .real-visuel.v3 { background: linear-gradient(135deg, #0A1B3D, #1E5EFF); }
@@ -508,15 +518,21 @@
 
 <!-- ===== BARRE D'ANNONCE STICKY ===== -->
 <div class="bandeau">
+  <!-- 🔧 TEXTE BANDEAU : Phrase d'offre limitée -->
   🔥 <strong>OFFRE LIMITÉE</strong> : Site internet à 99€ seulement — Sans abonnement
+  <!-- 🔧 CHRONO : Le compte à rebours est géré en bas dans le <script> -->
   <span class="chrono" id="chrono" aria-live="polite">47:59:59</span>
 </div>
 
 <!-- ===== NAVBAR ===== -->
 <header class="navbar" id="navbar">
   <div class="navbar-inner">
+    <!-- 🔧 LOGO TEXTE : Remplacer "only99WEBSITE.COM" par votre nom / logo texte -->
+    <!-- 🔧 LOGO IMAGE (optionnel) : Remplacer le texte par <img src="votre-logo.png" alt="Nom" height="40"> -->
     <a href="#accueil" class="logo">only<span>99</span>WEBSITE.COM</a>
+
     <nav class="nav-links" aria-label="Navigation principale">
+      <!-- 🔧 TEXTES MENU : Liens de navigation -->
       <a href="#accueil">Accueil</a>
       <a href="#offre">Offre</a>
       <a href="#realisations">Réalisations</a>
@@ -524,6 +540,7 @@
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-cta">
+      <!-- 🔧 TEXTE BOUTON NAVBAR -->
       <a href="#contact" class="btn btn-primaire btn-sm">Je commande à 99€</a>
     </div>
   </div>
@@ -532,17 +549,22 @@
 <!-- ===== HERO ===== -->
 <section class="hero" id="accueil">
   <div class="hero-inner">
+    <!-- 🔧 TEXTE HERO : Titre principal -->
     <h1>Votre site internet professionnel à <span class="prix">99€</span> seulement</h1>
+    <!-- 🔧 TEXTE HERO : Sous-titre -->
     <p class="hero-sub">Paiement unique. Sans abonnement. En ligne en 72h.</p>
     <div class="badges">
+      <!-- 🔧 TEXTES BADGES : Arguments clés -->
       <span class="badge">✅ Sans engagement</span>
-      <span class="badge">✅ Hébergement 1 an offert</span>
+      <span class="badge">✅ Support inclus</span>
       <span class="badge">✅ Propriétaire à 100%</span>
     </div>
     <div class="hero-ctas">
+      <!-- 🔧 TEXTES BOUTONS HERO -->
       <a href="#contact" class="btn btn-primaire">Je veux mon site à 99€</a>
       <a href="#realisations" class="btn btn-secondaire">Voir un exemple</a>
     </div>
+    <!-- 🔧 TEXTE PREUVE SOCIALE : Note et nombre de clients -->
     <p class="preuve-sociale"><span class="etoiles">★★★★★</span> 4,8/5 — 127 clients satisfaits</p>
   </div>
 </section>
@@ -551,12 +573,14 @@
 <section class="section-bleu-clair" id="offre">
   <div class="container">
     <div class="section-titre fade-up">
+      <!-- 🔧 TEXTE SECTION : Titre + sous-titre -->
       <h2>Tout ce qu'il vous faut pour 99€</h2>
       <p>Pas de petites lignes, pas de surprise. Voici exactement ce que vous recevez.</p>
     </div>
     <div class="grille-inclus">
+      <!-- 🔧 CARTE 1 : Icône + Titre + Description (répétable) -->
       <div class="carte-inclus fade-up">
-        <div class="icone">🖥️</div>
+        <div class="icone">🖥️</div> <!-- 🔧 ICÔNE : Emoji ou remplacer par <img> -->
         <h3>Site vitrine 1 à 3 pages</h3>
         <p>Accueil, présentation, contact — tout ce qu'il faut pour être trouvé en ligne.</p>
       </div>
@@ -566,14 +590,14 @@
         <p>Impeccable sur mobile, tablette et ordinateur.</p>
       </div>
       <div class="carte-inclus fade-up">
-        <div class="icone">🌐</div>
-        <h3>Nom de domaine offert</h3>
-        <p>1 an offert pour votre .fr ou .com.</p>
+        <div class="icone">🛠️</div>
+        <h3>Support technique inclus</h3>
+        <p>Une aide par email pour vous accompagner après la livraison.</p>
       </div>
       <div class="carte-inclus fade-up">
-        <div class="icone">☁️</div>
-        <h3>Hébergement offert</h3>
-        <p>1 an d'hébergement rapide et sécurisé inclus.</p>
+        <div class="icone">✏️</div>
+        <h3>Modifications pendant 15 jours</h3>
+        <p>Des ajustements gratuits sur vos textes et photos après livraison.</p>
       </div>
       <div class="carte-inclus fade-up">
         <div class="icone">✉️</div>
@@ -603,23 +627,26 @@
 <section>
   <div class="container">
     <div class="section-titre fade-up">
+      <!-- 🔧 TEXTE SECTION COMPARATIF -->
       <h2>Nous vs les agences classiques</h2>
       <p>Même qualité, sans le prix et les délais à rallonge.</p>
     </div>
     <table class="tableau-comparatif fade-up">
       <thead>
         <tr>
+          <!-- 🔧 TEXTES EN-TÊTES TABLEAU -->
           <th scope="col">Critère</th>
           <th scope="col">Notre offre — 99€</th>
           <th scope="col">Agence classique</th>
         </tr>
       </thead>
       <tbody>
+        <!-- 🔧 LIGNES TABLEAU : Critère | Notre offre | Concurrence -->
         <tr><td>Prix</td><td>99€ une fois</td><td>500€ à 1500€</td></tr>
         <tr><td>Délai</td><td>72h</td><td>3 à 8 semaines</td></tr>
         <tr><td>Abonnement</td><td>Aucun</td><td>Souvent obligatoire</td></tr>
         <tr><td>Propriété du site</td><td>100% à vous</td><td>Parfois verrouillée</td></tr>
-        <tr><td>Hébergement</td><td>1 an offert</td><td>Facturé à part</td></tr>
+        <tr><td>Support après livraison</td><td>Inclus 15 jours</td><td>Souvent facturé</td></tr>
       </tbody>
     </table>
   </div>
@@ -629,20 +656,24 @@
 <section class="section-bleu-vif">
   <div class="container">
     <div class="section-titre fade-up">
+      <!-- 🔧 TEXTE SECTION ÉTAPES -->
       <h2>Comment ça marche</h2>
       <p>Trois étapes, aucune complication.</p>
     </div>
     <div class="etapes">
+      <!-- 🔧 ÉTAPE 1 -->
       <div class="etape fade-up">
         <div class="num">1</div>
         <h3>Vous commandez</h3>
         <p>2 minutes pour nous dire ce dont vous avez besoin.</p>
       </div>
+      <!-- 🔧 ÉTAPE 2 -->
       <div class="etape fade-up">
         <div class="num">2</div>
         <h3>On crée votre site</h3>
         <p>Notre équipe conçoit votre site en 72h.</p>
       </div>
+      <!-- 🔧 ÉTAPE 3 -->
       <div class="etape fade-up">
         <div class="num">3</div>
         <h3>Vous êtes en ligne 🚀</h3>
@@ -656,30 +687,38 @@
 <section id="realisations">
   <div class="container">
     <div class="section-titre fade-up">
+      <!-- 🔧 TEXTE SECTION RÉALISATIONS -->
       <h2>Ils nous ont fait confiance</h2>
       <p>Quelques exemples de sites livrés à nos clients.</p>
     </div>
     <div class="grille-real">
+      <!-- 🔧 RÉALISATION 1 : Remplacer le texte par une vraie image -->
+      <!-- Exemple photo : <img src="photo-boulangerie.jpg" alt="Boulangerie Dupont" style="width:100%;height:150px;object-fit:cover;"> -->
       <div class="carte-real fade-up">
         <div class="real-visuel v1">Boulangerie Dupont</div>
         <div class="real-info"><div class="metier">Boulangerie — Reims</div></div>
       </div>
+      <!-- 🔧 RÉALISATION 2 -->
       <div class="carte-real fade-up">
         <div class="real-visuel v2">Plombier Paris 15</div>
         <div class="real-info"><div class="metier">Plomberie — Paris</div></div>
       </div>
+      <!-- 🔧 RÉALISATION 3 -->
       <div class="carte-real fade-up">
         <div class="real-visuel v3">Coiffeur Lyon</div>
         <div class="real-info"><div class="metier">Salon de coiffure — Lyon</div></div>
       </div>
+      <!-- 🔧 RÉALISATION 4 -->
       <div class="carte-real fade-up">
         <div class="real-visuel v2">Électricité Martin</div>
         <div class="real-info"><div class="metier">Électricien — Nantes</div></div>
       </div>
+      <!-- 🔧 RÉALISATION 5 -->
       <div class="carte-real fade-up">
         <div class="real-visuel v1">Fleurs de Léa</div>
         <div class="real-info"><div class="metier">Fleuriste — Bordeaux</div></div>
       </div>
+      <!-- 🔧 RÉALISATION 6 -->
       <div class="carte-real fade-up">
         <div class="real-visuel v3">Garage Petit</div>
         <div class="real-info"><div class="metier">Garage automobile — Toulouse</div></div>
@@ -692,19 +731,23 @@
 <section class="section-bleu-clair">
   <div class="container">
     <div class="section-titre fade-up">
+      <!-- 🔧 TEXTE SECTION TÉMOIGNAGES -->
       <h2>Ce qu'en disent nos clients</h2>
     </div>
     <div class="grille-temoignages">
+      <!-- 🔧 TÉMOIGNAGE 1 : Avis + Auteur -->
       <div class="carte-temoin fade-up">
         <div class="etoiles">★★★★★</div>
         <p class="avis">Site livré en 3 jours, exactement comme demandé. Je n'en revenais pas du prix.</p>
         <div class="auteur">Sophie M. — Fleuriste, Bordeaux</div>
       </div>
+      <!-- 🔧 TÉMOIGNAGE 2 -->
       <div class="carte-temoin fade-up">
         <div class="etoiles">★★★★★</div>
         <p class="avis">Enfin une offre sans abonnement caché. Mon site est à moi, point final.</p>
         <div class="auteur">Karim B. — Plombier, Paris</div>
       </div>
+      <!-- 🔧 TÉMOIGNAGE 3 -->
       <div class="carte-temoin fade-up">
         <div class="etoiles">★★★★★</div>
         <p class="avis">Rapport qualité-prix imbattable. Je recommande à tous les artisans du quartier.</p>
@@ -718,9 +761,11 @@
 <section id="faq">
   <div class="container">
     <div class="section-titre fade-up">
+      <!-- 🔧 TEXTE SECTION FAQ -->
       <h2>Questions fréquentes</h2>
     </div>
     <div class="faq-liste fade-up">
+      <!-- 🔧 FAQ 1 : Question + Réponse -->
       <div class="faq-item">
         <button class="faq-question" aria-expanded="false">
           Pourquoi seulement 99€ ?
@@ -728,6 +773,7 @@
         </button>
         <div class="faq-reponse"><p>Parce qu'on utilise des modèles optimisés et un process rodé. Pas de frais d'agence superflus, juste un site qui marche.</p></div>
       </div>
+      <!-- 🔧 FAQ 2 -->
       <div class="faq-item">
         <button class="faq-question" aria-expanded="false">
           Y a-t-il un abonnement caché ?
@@ -735,6 +781,7 @@
         </button>
         <div class="faq-reponse"><p>Non. Le paiement de 99€ est unique. Aucun engagement ni frais récurrent obligatoire.</p></div>
       </div>
+      <!-- 🔧 FAQ 3 -->
       <div class="faq-item">
         <button class="faq-question" aria-expanded="false">
           Suis-je propriétaire du site ?
@@ -742,6 +789,7 @@
         </button>
         <div class="faq-reponse"><p>Oui, à 100%. Le site vous appartient dès sa livraison.</p></div>
       </div>
+      <!-- 🔧 FAQ 4 -->
       <div class="faq-item">
         <button class="faq-question" aria-expanded="false">
           En combien de temps mon site est-il en ligne ?
@@ -749,6 +797,7 @@
         </button>
         <div class="faq-reponse"><p>Comptez 72h à partir de la validation de votre commande et de vos contenus.</p></div>
       </div>
+      <!-- 🔧 FAQ 5 -->
       <div class="faq-item">
         <button class="faq-question" aria-expanded="false">
           Puis-je modifier mon site moi-même ?
@@ -756,13 +805,15 @@
         </button>
         <div class="faq-reponse"><p>Oui, un accès simple vous permet de mettre à jour vos textes et photos.</p></div>
       </div>
+      <!-- 🔧 FAQ 6 -->
       <div class="faq-item">
         <button class="faq-question" aria-expanded="false">
-          Que se passe-t-il après 1 an d'hébergement offert ?
+          Que comprend le support technique ?
           <span class="signe" aria-hidden="true">+</span>
         </button>
-        <div class="faq-reponse"><p>Vous pouvez renouveler l'hébergement à un tarif préférentiel, sans obligation.</p></div>
+        <div class="faq-reponse"><p>Pendant 15 jours après la livraison, vous pouvez nous demander des modifications de textes et photos, et obtenir de l’aide par email.</p></div>
       </div>
+      <!-- 🔧 FAQ 7 -->
       <div class="faq-item">
         <button class="faq-question" aria-expanded="false">
           Le référencement Google est-il inclus ?
@@ -770,6 +821,7 @@
         </button>
         <div class="faq-reponse"><p>Un référencement SEO de base est inclus pour que votre site soit indexable dès sa mise en ligne.</p></div>
       </div>
+      <!-- 🔧 FAQ 8 -->
       <div class="faq-item">
         <button class="faq-question" aria-expanded="false">
           Puis-je avoir plus de pages ?
@@ -784,10 +836,12 @@
 <!-- ===== CTA FINALE ===== -->
 <section class="section-bleu-vif cta-finale" id="contact">
   <div class="container">
+    <!-- 🔧 TEXTE CTA FINAL -->
     <h2>Prêt à avoir votre site à 99€ ?</h2>
     <p>Réponse en moins de 2h. Sans engagement.</p>
 
     <form class="formulaire fade-up" id="formulaire-contact">
+      <!-- 🔧 FORMULAIRE : Labels + placeholders -->
       <div class="champ">
         <label for="nom">Nom</label>
         <input type="text" id="nom" name="nom" required autocomplete="name">
@@ -804,16 +858,19 @@
         <label for="message">Message (optionnel)</label>
         <textarea id="message" name="message" placeholder="Parlez-nous de votre activité..."></textarea>
       </div>
+      <!-- 🔧 TEXTE BOUTON FORMULAIRE -->
       <button type="submit" class="btn btn-blanc">Je commande maintenant</button>
     </form>
 
+    <!-- 🔧 MESSAGE SUCCÈS FORMULAIRE -->
     <div class="form-succes" id="form-succes">
       <div class="icone-ok">✅</div>
       <h3 style="color:#fff; margin-bottom:6px;">Merci !</h3>
       <p style="color:rgba(255,255,255,0.85);">Votre demande a bien été reçue. Nous vous répondons sous 2h.</p>
     </div>
 
-    <p class="alt-contact">Ou appelez-nous : <a href="tel:+33100000000">01 XX XX XX XX</a> <!-- 🔧 Remplacer par votre numéro --></p>
+    <!-- 🔧 TÉLÉPHONE : Remplacer par votre vrai numéro -->
+    <p class="alt-contact">Ou appelez-nous : <a href="tel:+33100000000">01 XX XX XX XX</a></p>
   </div>
 </section>
 
@@ -821,30 +878,33 @@
 <footer>
   <div class="container">
     <div class="footer-top">
+      <!-- 🔧 LOGO FOOTER (même que navbar) -->
       <div class="footer-logo">only<span>99</span>WEBSITE.COM</div>
       <ul class="footer-liens">
+        <!-- 🔧 LIENS LÉGAUX : Remplacer # par vos vraies pages -->
         <li><a href="#">Mentions légales</a></li>
         <li><a href="#">CGV</a></li>
         <li><a href="#">Politique de confidentialité</a></li>
-        <!-- 🔧 Remplacer les liens # par vos vraies pages légales -->
       </ul>
       <div class="footer-social">
+        <!-- 🔧 RÉSEAUX SOCIAUX : Remplacer # et les lettres par vos vrais liens + icônes -->
         <a href="#" aria-label="Facebook">f</a>
         <a href="#" aria-label="Instagram">ig</a>
         <a href="#" aria-label="LinkedIn">in</a>
-        <!-- 🔧 Remplacer par vos vrais liens réseaux sociaux -->
       </div>
     </div>
     <div class="footer-bas">
+      <!-- 🔧 COPYRIGHT + EMAIL -->
       <span>© 2026 only99WEBSITE.COM. Tous droits réservés.</span>
-      <span>contact@only99website.com <!-- 🔧 Remplacer par votre email --></span>
+      <span>contact@only99website.com</span>
     </div>
   </div>
 </footer>
 
 <script>
   // ===== COMPTE À REBOURS =====
-  // 🔧 Modifier la durée initiale ici (en secondes) si besoin
+  // 🔧 DURÉE CHRONO : Modifier la durée initiale ici (en secondes)
+  // Exemple : 24h = 24 * 3600 | 47h59m59s = 47 * 3600 + 59 * 60 + 59
   (function() {
     let dureeRestante = 47 * 3600 + 59 * 60 + 59; // 47h59m59s
     const chronoEl = document.getElementById('chrono');
@@ -918,7 +978,7 @@
   })();
 
   // ===== FORMULAIRE DE CONTACT =====
-  // 🔧 Brancher ici votre service d'envoi (Formspree, EmailJS, backend maison, etc.)
+  // 🔧 FORMULAIRE : Brancher ici votre service d'envoi (Formspree, EmailJS, backend maison, etc.)
   (function() {
     const form = document.getElementById('formulaire-contact');
     const succes = document.getElementById('form-succes');
