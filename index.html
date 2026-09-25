@@ -453,6 +453,174 @@
   .form-succes.actif { display: block; }
   .form-succes .icone-ok { font-size: 2.4rem; margin-bottom: 10px; }
 
+  /* ===== TUNNEL DE COMMANDE (FORMULAIRE AVANCÉ) ===== */
+  .tunnel {
+    max-width: 720px;
+    margin: 0 auto;
+    background: var(--blanc);
+    border-radius: var(--radius-lg);
+    padding: 8px;
+    text-align: left;
+    box-shadow: 0 30px 60px -20px rgba(0,0,0,0.35);
+    overflow: hidden;
+  }
+  .bloc-etape { padding: 30px 28px; border-bottom: 1px solid var(--bleu-clair); }
+  .bloc-etape:last-of-type { border-bottom: none; }
+  .bloc-entete { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+  .bloc-num {
+    flex-shrink: 0;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: var(--bleu-vif);
+    color: var(--blanc);
+    font-family: var(--ff-titre);
+    font-weight: 700;
+    font-size: 0.92rem;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .bloc-entete h3 { font-size: 1.08rem; color: var(--bleu-fonce); }
+  .bloc-entete .bloc-sub { display: block; font-size: 0.82rem; font-weight: 500; color: var(--gris); margin-top: 2px; }
+
+  /* Sélection visuelle (secteur, couleurs) */
+  .grille-choix { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .choix-carte { position: relative; }
+  .choix-carte input { position: absolute; opacity: 0; width: 0; height: 0; }
+  .choix-carte label {
+    display: flex; align-items: center; gap: 10px;
+    padding: 14px 16px;
+    border: 1.5px solid var(--gris-clair);
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--bleu-fonce);
+    cursor: pointer;
+    transition: border-color 0.18s ease, background 0.18s ease;
+    height: 100%;
+  }
+  .choix-carte .emoji { font-size: 1.3rem; }
+  .choix-carte input:checked + label {
+    border-color: var(--bleu-vif);
+    background: var(--bleu-clair);
+    box-shadow: 0 0 0 1px var(--bleu-vif) inset;
+  }
+  .choix-carte input:focus-visible + label { outline: 3px solid var(--bleu-vif); outline-offset: 2px; }
+
+  /* Champs standards réutilisés dans le tunnel */
+  .tunnel .champ { margin-bottom: 16px; }
+  .tunnel .champ:last-child { margin-bottom: 0; }
+  .champs-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+  /* Bloc service (prestation) */
+  .service-bloc {
+    border: 1.5px dashed var(--gris-clair);
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 14px;
+  }
+  .service-bloc:last-child { margin-bottom: 0; }
+  .service-bloc .service-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--bleu-vif);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+  }
+
+  /* Radios simples en ligne (action principale, logo) */
+  .choix-lignes { display: flex; flex-direction: column; gap: 10px; }
+  .choix-ligne { position: relative; }
+  .choix-ligne input { position: absolute; opacity: 0; width: 0; height: 0; }
+  .choix-ligne label {
+    display: flex; align-items: center; gap: 10px;
+    padding: 13px 16px;
+    border: 1.5px solid var(--gris-clair);
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color 0.18s ease, background 0.18s ease;
+  }
+  .choix-ligne input:checked + label {
+    border-color: var(--bleu-vif);
+    background: var(--bleu-clair);
+  }
+  .champ-conditionnel { display: none; margin-top: 10px; }
+  .champ-conditionnel.actif { display: block; }
+
+  /* Upload fichier logo */
+  .upload-zone {
+    border: 1.5px dashed var(--gris-clair);
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--gris);
+  }
+  .upload-zone input[type="file"] { margin-top: 8px; font-size: 0.85rem; width: 100%; }
+
+  /* Palette de couleurs (nuancier) */
+  .grille-couleurs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .swatch-carte { position: relative; }
+  .swatch-carte input { position: absolute; opacity: 0; width: 0; height: 0; }
+  .swatch-carte label {
+    display: flex; align-items: center; gap: 10px;
+    padding: 12px 14px;
+    border: 1.5px solid var(--gris-clair);
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--bleu-fonce);
+    cursor: pointer;
+    transition: border-color 0.18s ease, background 0.18s ease;
+  }
+  .swatch-carte input:checked + label { border-color: var(--bleu-vif); background: var(--bleu-clair); }
+  .pastille { width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0; border: 1px solid rgba(0,0,0,0.08); }
+  .pastille.c1 { background: linear-gradient(135deg, #1E5EFF 50%, #FFFFFF 50%); }
+  .pastille.c2 { background: linear-gradient(135deg, #0A1B3D 50%, #C9A24B 50%); }
+  .pastille.c3 { background: linear-gradient(135deg, #2E7D4F 50%, #8C6A46 50%); }
+  .pastille.c4 { background: linear-gradient(135deg, #D62E2E 50%, #6B7A99 50%); }
+
+  /* Panier / options complémentaires */
+  .panier { display: flex; flex-direction: column; gap: 10px; }
+  .panier-ligne {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding: 13px 16px;
+    border: 1.5px solid var(--gris-clair);
+    border-radius: 10px;
+    transition: border-color 0.18s ease, background 0.18s ease;
+  }
+  .panier-ligne.actif { border-color: var(--bleu-vif); background: var(--bleu-clair); }
+  .panier-ligne.base { background: var(--bleu-clair); border-color: var(--bleu-vif); }
+  .panier-texte { display: flex; align-items: flex-start; gap: 10px; }
+  .panier-texte input { margin-top: 4px; width: 17px; height: 17px; accent-color: var(--bleu-vif); flex-shrink: 0; }
+  .panier-texte .titre-option { font-weight: 700; font-size: 0.92rem; color: var(--bleu-fonce); display: block; }
+  .panier-texte .desc-option { font-size: 0.8rem; color: var(--gris); display: block; margin-top: 2px; }
+  .prix-option { font-weight: 700; font-size: 0.92rem; color: var(--bleu-vif); white-space: nowrap; }
+
+  .total-recap {
+    margin-top: 16px;
+    padding: 18px 20px;
+    background: var(--bleu-fonce);
+    border-radius: 10px;
+    color: var(--blanc);
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+  }
+  .total-recap .total-label { font-size: 0.85rem; color: rgba(255,255,255,0.7); }
+  .total-recap .total-montant { font-family: var(--ff-titre); font-size: 1.6rem; font-weight: 800; color: var(--blanc); }
+  .total-recap .total-mensuel { font-size: 0.8rem; color: rgba(255,255,255,0.75); width: 100%; }
+
+  /* Validation CGV */
+  .cgv-ligne { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 18px; }
+  .cgv-ligne input { margin-top: 4px; width: 17px; height: 17px; accent-color: var(--bleu-vif); flex-shrink: 0; }
+  .cgv-ligne label { font-size: 0.82rem; color: var(--gris); line-height: 1.5; }
+
+  @media (max-width: 560px) {
+    .grille-choix, .grille-couleurs { grid-template-columns: 1fr; }
+    .champs-duo { grid-template-columns: 1fr; }
+    .bloc-etape { padding: 24px 18px; }
+  }
+
   /* ===== FOOTER ===== */
   footer {
     background: var(--bleu-nuit);
@@ -576,13 +744,14 @@
       <!-- 🔧 TEXTE SECTION : Titre + sous-titre -->
       <h2>Tout ce qu'il vous faut pour 99€</h2>
       <p>Pas de petites lignes, pas de surprise. Voici exactement ce que vous recevez.</p>
+      <p style="margin-top:10px; font-weight:600; color:var(--bleu-fonce);">Un Site Vitrine One-Page complet, avec 4 sections : Accueil, Services, À propos, Contact.</p>
     </div>
     <div class="grille-inclus">
       <!-- 🔧 CARTE 1 : Icône + Titre + Description (répétable) -->
       <div class="carte-inclus fade-up">
         <div class="icone">🖥️</div> <!-- 🔧 ICÔNE : Emoji ou remplacer par <img> -->
-        <h3>Site vitrine 1 à 3 pages</h3>
-        <p>Accueil, présentation, contact — tout ce qu'il faut pour être trouvé en ligne.</p>
+        <h3>Site Vitrine One-Page complet</h3>
+        <p>4 sections sur une seule page : Accueil, Services, À propos, Contact — tout ce qu'il faut pour être trouvé en ligne.</p>
       </div>
       <div class="carte-inclus fade-up">
         <div class="icone">📱</div>
@@ -829,6 +998,22 @@
         </button>
         <div class="faq-reponse"><p>Oui, des pages supplémentaires peuvent être ajoutées en option sur devis.</p></div>
       </div>
+      <!-- 🔧 FAQ 9 -->
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Comment fonctionne l'option Réseaux Sociaux à 39€/mois ?
+          <span class="signe" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-reponse"><p>Vous nous fournissez vos photos et visuels bruts, et nous nous occupons de tout : rédaction, mise en page et publication de 2 posts par mois sur Facebook et Instagram. C'est une option sans engagement, résiliable à tout moment.</p></div>
+      </div>
+      <!-- 🔧 FAQ 10 -->
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Que comprend l'option Logo à 49€ ?
+          <span class="signe" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-reponse"><p>Il s'agit de la création d'une identité typographique moderne, conçue sur-mesure pour votre activité, et livrée directement intégrée à votre site.</p></div>
+      </div>
     </div>
   </div>
 </section>
@@ -840,26 +1025,261 @@
     <h2>Prêt à avoir votre site à 99€ ?</h2>
     <p>Réponse en moins de 2h. Sans engagement.</p>
 
-    <form class="formulaire fade-up" id="formulaire-contact">
-      <!-- 🔧 FORMULAIRE : Labels + placeholders -->
-      <div class="champ">
-        <label for="nom">Nom</label>
-        <input type="text" id="nom" name="nom" required autocomplete="name">
+    <form class="tunnel fade-up" id="formulaire-contact">
+
+      <!-- ===== ÉTAPE A : SECTEUR D'ACTIVITÉ ===== -->
+      <div class="bloc-etape">
+        <div class="bloc-entete">
+          <span class="bloc-num">1</span>
+          <h3>Votre secteur d'activité
+            <span class="bloc-sub">Pour adapter le style de votre site à votre métier</span>
+          </h3>
+        </div>
+        <div class="grille-choix">
+          <div class="choix-carte">
+            <input type="radio" id="secteur-btp" name="secteur" value="Artisans & BTP" required>
+            <label for="secteur-btp"><span class="emoji">🔨</span> Artisans &amp; BTP <span style="font-weight:400;color:var(--gris);">(Plombier, Électricien, Peintre…)</span></label>
+          </div>
+          <div class="choix-carte">
+            <input type="radio" id="secteur-commerce" name="secteur" value="Commerce & Services de proximité">
+            <label for="secteur-commerce"><span class="emoji">🛍️</span> Commerce &amp; Services de proximité <span style="font-weight:400;color:var(--gris);">(Coiffeur, Fleuriste, Restaurant…)</span></label>
+          </div>
+          <div class="choix-carte">
+            <input type="radio" id="secteur-soin" name="secteur" value="Professionnels du Soin & Bien-être">
+            <label for="secteur-soin"><span class="emoji">🌿</span> Soin &amp; Bien-être <span style="font-weight:400;color:var(--gris);">(Coach, Sophrologue, Masseur…)</span></label>
+          </div>
+          <div class="choix-carte">
+            <input type="radio" id="secteur-b2b" name="secteur" value="Consultant, Indépendant & B2B">
+            <label for="secteur-b2b"><span class="emoji">💼</span> Consultant, Indépendant &amp; B2B</label>
+          </div>
+        </div>
       </div>
-      <div class="champ">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required autocomplete="email">
+
+      <!-- ===== ÉTAPE B : INFOS ENTREPRISE ===== -->
+      <div class="bloc-etape">
+        <div class="bloc-entete">
+          <span class="bloc-num">2</span>
+          <h3>Votre entreprise
+            <span class="bloc-sub">Les informations qui apparaîtront sur votre site</span>
+          </h3>
+        </div>
+        <div class="champ">
+          <label for="nom_entreprise">Nom de l'entreprise / Marque *</label>
+          <input type="text" id="nom_entreprise" name="nom_entreprise" required>
+        </div>
+        <div class="champ">
+          <label for="slogan">Slogan ou phrase d'accroche</label>
+          <input type="text" id="slogan" name="slogan" maxlength="90" placeholder="Une phrase courte qui vous représente">
+        </div>
+        <div class="champ">
+          <label for="adresse">Adresse physique (si accueil du public)</label>
+          <input type="text" id="adresse" name="adresse" placeholder="12 rue de la Paix, 75000 Paris">
+        </div>
+        <div class="champs-duo">
+          <div class="champ">
+            <label for="telephone">Téléphone de contact *</label>
+            <input type="tel" id="telephone" name="telephone" required autocomplete="tel">
+          </div>
+          <div class="champ">
+            <label for="email">Email de contact *</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+        </div>
+        <div class="champ">
+          <label for="zone_geo">Zone géographique d'intervention</label>
+          <input type="text" id="zone_geo" name="zone_geo" placeholder="Ex : Paris et 20km autour">
+        </div>
       </div>
-      <div class="champ">
-        <label for="telephone">Téléphone</label>
-        <input type="tel" id="telephone" name="telephone" required autocomplete="tel">
+
+      <!-- ===== ÉTAPE C : PRESTATIONS ===== -->
+      <div class="bloc-etape">
+        <div class="bloc-entete">
+          <span class="bloc-num">3</span>
+          <h3>Vos prestations &amp; services
+            <span class="bloc-sub">3 services maximum, pour rester clair et efficace</span>
+          </h3>
+        </div>
+        <div class="service-bloc">
+          <div class="service-label">Service 1</div>
+          <div class="champ">
+            <label for="service1_titre">Titre</label>
+            <input type="text" id="service1_titre" name="service1_titre">
+          </div>
+          <div class="champ">
+            <label for="service1_desc">Description courte (2 lignes max)</label>
+            <textarea id="service1_desc" name="service1_desc" rows="2" maxlength="160"></textarea>
+          </div>
+        </div>
+        <div class="service-bloc">
+          <div class="service-label">Service 2</div>
+          <div class="champ">
+            <label for="service2_titre">Titre</label>
+            <input type="text" id="service2_titre" name="service2_titre">
+          </div>
+          <div class="champ">
+            <label for="service2_desc">Description courte (2 lignes max)</label>
+            <textarea id="service2_desc" name="service2_desc" rows="2" maxlength="160"></textarea>
+          </div>
+        </div>
+        <div class="service-bloc">
+          <div class="service-label">Service 3</div>
+          <div class="champ">
+            <label for="service3_titre">Titre</label>
+            <input type="text" id="service3_titre" name="service3_titre">
+          </div>
+          <div class="champ">
+            <label for="service3_desc">Description courte (2 lignes max)</label>
+            <textarea id="service3_desc" name="service3_desc" rows="2" maxlength="160"></textarea>
+          </div>
+        </div>
       </div>
-      <div class="champ">
-        <label for="message">Message (optionnel)</label>
-        <textarea id="message" name="message" placeholder="Parlez-nous de votre activité..."></textarea>
+
+      <!-- ===== ÉTAPE D : ACTION PRINCIPALE ===== -->
+      <div class="bloc-etape">
+        <div class="bloc-entete">
+          <span class="bloc-num">4</span>
+          <h3>Bouton d'action de votre site
+            <span class="bloc-sub">Que doit faire vos visiteurs en un clic ?</span>
+          </h3>
+        </div>
+        <div class="choix-lignes">
+          <div class="choix-ligne">
+            <input type="radio" id="action-email" name="action_principale" value="Envoyer un email" checked>
+            <label for="action-email">✉️ Envoyer un email (formulaire de contact)</label>
+          </div>
+          <div class="choix-ligne">
+            <input type="radio" id="action-appel" name="action_principale" value="Appeler directement">
+            <label for="action-appel">📞 Appeler directement (bouton d'appel mobile)</label>
+          </div>
+          <div class="choix-ligne">
+            <input type="radio" id="action-redirect" name="action_principale" value="Rediriger vers un outil externe">
+            <label for="action-redirect">🔗 Rediriger vers un outil externe (Doctolib, Calendly, Planity…)</label>
+          </div>
+        </div>
+        <div class="champ champ-conditionnel" id="bloc-url-externe">
+          <label for="url_externe">URL de l'outil externe</label>
+          <input type="url" id="url_externe" name="url_externe" placeholder="https://calendly.com/votre-compte">
+        </div>
       </div>
-      <!-- 🔧 TEXTE BOUTON FORMULAIRE -->
-      <button type="submit" class="btn btn-blanc">Je commande maintenant</button>
+
+      <!-- ===== ÉTAPE E : VISUELS & STYLE ===== -->
+      <div class="bloc-etape">
+        <div class="bloc-entete">
+          <span class="bloc-num">5</span>
+          <h3>Visuels &amp; style
+            <span class="bloc-sub">Votre logo et l'ambiance couleurs de votre site</span>
+          </h3>
+        </div>
+        <div class="choix-lignes" style="margin-bottom:14px;">
+          <div class="choix-ligne">
+            <input type="radio" id="logo-upload" name="logo_option" value="upload" checked>
+            <label for="logo-upload">📁 Je téléverse mon logo</label>
+          </div>
+          <div class="choix-ligne">
+            <input type="radio" id="logo-aucun" name="logo_option" value="aucun">
+            <label for="logo-aucun">✨ Je n'ai pas de logo (création incluse en option, +49€)</label>
+          </div>
+        </div>
+        <div class="champ-conditionnel actif" id="bloc-upload-logo">
+          <div class="upload-zone">
+            Formats acceptés : JPG, PNG, SVG, PDF (5 Mo max)
+            <input type="file" id="logo_fichier" name="logo_fichier" accept=".jpg,.jpeg,.png,.svg,.pdf">
+          </div>
+        </div>
+        <div class="champ-conditionnel" id="bloc-info-logo-auto">
+          <p style="font-size:0.85rem; color:var(--bleu-vif); font-weight:600; background:var(--bleu-clair); padding:10px 14px; border-radius:8px;">
+            👉 L'option "Création de logo professionnel (+49€)" a été ajoutée automatiquement à votre panier ci-dessous. Vous pouvez la retirer si besoin.
+          </p>
+        </div>
+
+        <label style="display:block; font-size:0.85rem; font-weight:600; color:var(--bleu-fonce); margin:18px 0 10px;">Ambiance / couleurs souhaitées</label>
+        <div class="grille-couleurs">
+          <div class="swatch-carte">
+            <input type="radio" id="couleur-1" name="ambiance_couleurs" value="Bleu & Blanc (Professionnel / Corporate)" checked>
+            <label for="couleur-1"><span class="pastille c1"></span> Bleu &amp; Blanc <span style="font-weight:400;color:var(--gris);">(Corporate)</span></label>
+          </div>
+          <div class="swatch-carte">
+            <input type="radio" id="couleur-2" name="ambiance_couleurs" value="Noir & Or / Sombre (Haut de gamme / Élégant)">
+            <label for="couleur-2"><span class="pastille c2"></span> Noir &amp; Or <span style="font-weight:400;color:var(--gris);">(Haut de gamme)</span></label>
+          </div>
+          <div class="swatch-carte">
+            <input type="radio" id="couleur-3" name="ambiance_couleurs" value="Vert & Bois (Nature / Bien-être / Artisan)">
+            <label for="couleur-3"><span class="pastille c3"></span> Vert &amp; Bois <span style="font-weight:400;color:var(--gris);">(Nature)</span></label>
+          </div>
+          <div class="swatch-carte">
+            <input type="radio" id="couleur-4" name="ambiance_couleurs" value="Rouge & Gris (Dynamique / BTP / Urgence)">
+            <label for="couleur-4"><span class="pastille c4"></span> Rouge &amp; Gris <span style="font-weight:400;color:var(--gris);">(Dynamique)</span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== ÉTAPE F : OPTIONS / PANIER ===== -->
+      <div class="bloc-etape">
+        <div class="bloc-entete">
+          <span class="bloc-num">6</span>
+          <h3>Vos options
+            <span class="bloc-sub">Complétez votre offre selon vos besoins</span>
+          </h3>
+        </div>
+        <div class="panier" id="panier">
+          <div class="panier-ligne base">
+            <div class="panier-texte">
+              <input type="checkbox" id="opt-base" checked disabled>
+              <span>
+                <span class="titre-option">Offre de base</span>
+                <span class="desc-option">Site Vitrine One-Page complet (Accueil, Services, À propos, Contact)</span>
+              </span>
+            </div>
+            <span class="prix-option">99€</span>
+          </div>
+          <div class="panier-ligne">
+            <div class="panier-texte">
+              <input type="checkbox" id="opt-logo" name="option_logo" data-prix="49" data-type="unique">
+              <span>
+                <span class="titre-option">Création de logo professionnel</span>
+                <span class="desc-option">Identité typographique moderne sur-mesure</span>
+              </span>
+            </div>
+            <span class="prix-option">+49€</span>
+          </div>
+          <div class="panier-ligne">
+            <div class="panier-texte">
+              <input type="checkbox" id="opt-social" name="option_social" data-prix="39" data-type="mensuel">
+              <span>
+                <span class="titre-option">Gestion Réseaux Sociaux Instagram & Facebook</span>
+                <span class="desc-option">2 posts/mois rédigés et publiés — sans engagement</span>
+              </span>
+            </div>
+            <span class="prix-option">+39€/mois</span>
+          </div>
+          <div class="panier-ligne">
+            <div class="panier-texte">
+              <input type="checkbox" id="opt-domaine" name="option_domaine" data-prix="49" data-type="unique">
+              <span>
+                <span class="titre-option">Nom de domaine + Hébergement + Email pro</span>
+                <span class="desc-option">Tout géré pour vous, pendant 1 an</span>
+              </span>
+            </div>
+            <span class="prix-option">+49€/an</span>
+          </div>
+        </div>
+
+        <div class="total-recap">
+          <span class="total-label">Total estimé</span>
+          <span class="total-montant" id="total-montant">99€</span>
+          <span class="total-mensuel" id="total-mensuel"></span>
+        </div>
+      </div>
+
+      <!-- ===== ÉTAPE G : VALIDATION ===== -->
+      <div class="bloc-etape">
+        <div class="cgv-ligne">
+          <input type="checkbox" id="cgv" name="cgv" required>
+          <label for="cgv">J'accepte que le site soit créé strictement sur la base des éléments fournis ci-dessus. Toute modification ultérieure fera l'objet d'une facturation complémentaire. *</label>
+        </div>
+        <!-- 🔧 TEXTE BOUTON FORMULAIRE -->
+        <button type="submit" class="btn btn-primaire" style="width:100%;">Commander mon site maintenant</button>
+      </div>
     </form>
 
     <!-- 🔧 MESSAGE SUCCÈS FORMULAIRE -->
@@ -975,6 +1395,73 @@
       });
     }, { threshold: 0.12 });
     elements.forEach(el => observer.observe(el));
+  })();
+
+  // ===== TUNNEL DE COMMANDE : CHAMPS CONDITIONNELS =====
+  (function() {
+    // Action principale -> afficher le champ URL si "redirection externe"
+    const radiosAction = document.querySelectorAll('input[name="action_principale"]');
+    const blocUrl = document.getElementById('bloc-url-externe');
+    const champUrl = document.getElementById('url_externe');
+    function majAction() {
+      const val = document.querySelector('input[name="action_principale"]:checked').value;
+      const estRedirection = val === 'Rediriger vers un outil externe';
+      blocUrl.classList.toggle('actif', estRedirection);
+      champUrl.required = estRedirection;
+    }
+    radiosAction.forEach(r => r.addEventListener('change', majAction));
+    majAction();
+
+    // Option logo -> upload fichier OU activation auto de l'option logo (+49€)
+    const radiosLogo = document.querySelectorAll('input[name="logo_option"]');
+    const blocUpload = document.getElementById('bloc-upload-logo');
+    const blocInfoAuto = document.getElementById('bloc-info-logo-auto');
+    const optLogo = document.getElementById('opt-logo');
+    function majLogo() {
+      const val = document.querySelector('input[name="logo_option"]:checked').value;
+      const sansLogo = val === 'aucun';
+      blocUpload.classList.toggle('actif', !sansLogo);
+      blocInfoAuto.classList.toggle('actif', sansLogo);
+      if (sansLogo) {
+        optLogo.checked = true;
+      }
+      calculerTotal();
+    }
+    radiosLogo.forEach(r => r.addEventListener('change', majLogo));
+    majLogo();
+
+    // Mise en avant visuelle des lignes du panier cochées
+    const lignesPanier = document.querySelectorAll('#panier .panier-ligne:not(.base)');
+    lignesPanier.forEach(ligne => {
+      const input = ligne.querySelector('input[type="checkbox"]');
+      input.addEventListener('change', () => {
+        ligne.classList.toggle('actif', input.checked);
+        calculerTotal();
+      });
+    });
+
+    // ===== CALCUL DYNAMIQUE DU TOTAL =====
+    // 🔧 TARIFS : Modifiez les data-prix directement sur les checkboxes du panier dans le HTML
+    function calculerTotal() {
+      const BASE = 99;
+      let totalUnique = BASE;
+      let totalMensuel = 0;
+      document.querySelectorAll('#panier input[type="checkbox"][data-prix]').forEach(cb => {
+        if (cb.checked) {
+          const prix = parseFloat(cb.dataset.prix) || 0;
+          if (cb.dataset.type === 'mensuel') {
+            totalMensuel += prix;
+          } else {
+            totalUnique += prix;
+          }
+        }
+      });
+      document.getElementById('total-montant').textContent = totalUnique + '€';
+      const elMensuel = document.getElementById('total-mensuel');
+      elMensuel.textContent = totalMensuel > 0 ? '+ ' + totalMensuel + '€/mois (sans engagement)' : '';
+    }
+    window.calculerTotal = calculerTotal;
+    calculerTotal();
   })();
 
   // ===== FORMULAIRE DE CONTACT =====
