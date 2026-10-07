@@ -13,28 +13,27 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<!-- 🔧 POLICES : Changer les polices Google Fonts ici si besoin -->
+<!-- 🔧 POLICES : Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
   /* ===== VARIABLES DE COULEURS (TOUT LE SITE) ===== */
-  /* 🔧 COULEURS : Modifiez ici les couleurs principales du site */
   :root {
-    --bleu: #1E5EFF;           /* 🔧 COULEUR : Bleu principal */
-    --bleu-vif: #0066FF;        /* 🔧 COULEUR : Bleu vif (boutons, accents) */
-    --bleu-fonce: #0A1B3D;      /* 🔧 COULEUR : Bleu foncé (textes titres) */
-    --bleu-nuit: #0D1F4C;       /* 🔧 COULEUR : Bleu nuit (footer) */
-    --bleu-clair: #EAF1FF;      /* 🔧 COULEUR : Bleu clair (fonds sections) */
-    --bleu-clair-2: #F5F8FF;    /* 🔧 COULEUR : Bleu très clair (hero) */
-    --blanc: #FFFFFF;           /* 🔧 COULEUR : Blanc */
-    --gris: #6B7A99;            /* 🔧 COULEUR : Gris textes secondaires */
-    --gris-clair: #C9D5F0;      /* 🔧 COULEUR : Gris clair (bordures) */
-    --ombre-bleue: 0 20px 40px -12px rgba(30, 94, 255, 0.25); /* 🔧 OMBRE */
-    --ombre-douce: 0 4px 20px rgba(10, 27, 61, 0.06);          /* 🔧 OMBRE */
-    --radius: 10px;              /* 🔧 FORME : Arrondi des boutons */
-    --radius-lg: 16px;          /* 🔧 FORME : Arrondi des cartes */
-    --ff-titre: 'Poppins', sans-serif;  /* 🔧 POLICE : Titres */
-    --ff-texte: 'Inter', sans-serif;    /* 🔧 POLICE : Textes */
+    --bleu: #1E5EFF;           /* Bleu principal */
+    --bleu-vif: #0066FF;        /* Bleu vif (boutons, accents) */
+    --bleu-fonce: #0A1B3D;      /* Bleu foncé (textes titres) */
+    --bleu-nuit: #0D1F4C;       /* Bleu nuit (footer) */
+    --bleu-clair: #EAF1FF;      /* Bleu clair (fonds sections) */
+    --bleu-clair-2: #F5F8FF;    /* Bleu très clair (hero) */
+    --blanc: #FFFFFF;           /* Blanc */
+    --gris: #6B7A99;            /* Gris textes secondaires */
+    --gris-clair: #C9D5F0;      /* Gris clair (bordures) */
+    --ombre-bleue: 0 20px 40px -12px rgba(30, 94, 255, 0.25);
+    --ombre-douce: 0 4px 20px rgba(10, 27, 61, 0.06);
+    --radius: 10px;              /* Arrondi des boutons */
+    --radius-lg: 16px;          /* Arrondi des cartes */
+    --ff-titre: 'Poppins', sans-serif;  /* Police des titres */
+    --ff-texte: 'Inter', sans-serif;    /* Police des textes */
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -63,8 +62,6 @@
     margin: 0 auto;
     padding: 0 24px;
   }
-
-  .eyebrow-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 
   /* ===== ANIMATIONS ===== */
   @media (prefers-reduced-motion: no-preference) {
@@ -171,16 +168,9 @@
     border: 1.5px solid var(--bleu-vif);
   }
   .btn-secondaire:hover { background: var(--bleu-clair); transform: translateY(-2px); }
-  .btn-blanc {
-    background: var(--blanc);
-    color: var(--bleu-vif);
-    box-shadow: 0 8px 20px -6px rgba(0,0,0,0.2);
-  }
-  .btn-blanc:hover { transform: translateY(-2px) scale(1.02); }
   .btn-sm { padding: 10px 18px; font-size: 0.88rem; }
 
   .nav-cta { display: flex; align-items: center; }
-  .burger { display: none; background: none; }
 
   /* ===== HERO ===== */
   .hero {
@@ -268,6 +258,7 @@
     display: flex; align-items: center; justify-content: center;
     margin-bottom: 16px;
     color: var(--bleu-vif);
+    font-size: 1.3rem;
   }
   .carte-inclus h3 { font-size: 1.02rem; margin-bottom: 6px; }
   .carte-inclus p { font-size: 0.88rem; color: var(--gris); }
@@ -346,7 +337,6 @@
     text-align: center;
     padding: 12px;
   }
-  /* 🔧 COULEURS GRADIENTS RÉALISATIONS : Modifier les dégradés ici */
   .real-visuel.v1 { background: linear-gradient(135deg, #1E5EFF, #0A1B3D); }
   .real-visuel.v2 { background: linear-gradient(135deg, #0066FF, #4B8BFF); }
   .real-visuel.v3 { background: linear-gradient(135deg, #0A1B3D, #1E5EFF); }
@@ -407,7 +397,7 @@
   }
   .faq-item.ouvert .faq-reponse { padding: 0 22px 18px; }
 
-  /* ===== CTA FINALE ===== */
+  /* ===== CTA FINALE & FORMULAIRE ===== */
   .cta-finale { text-align: center; }
   .cta-finale h2 { color: var(--blanc); font-size: clamp(1.8rem, 3.4vw, 2.4rem); margin-bottom: 10px; }
   .cta-finale > .container > p { color: rgba(255,255,255,0.85); margin-bottom: 40px; font-size: 1.05rem; }
@@ -444,7 +434,6 @@
   .formulaire .btn { width: 100%; margin-top: 6px; }
   .champs-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 
-  /* Message d'état pour Formspree */
   #form-status {
     margin-top: 15px;
     font-size: 0.9rem;
@@ -760,14 +749,13 @@
     <h2>Prêt à lancer votre site internet ?</h2>
     <p>Remplissez le formulaire ci-dessous pour nous transmettre vos informations de contact.</p>
 
-    <!-- FORMULAIRE DE CONTACT FORMSFREE -->
+    <!-- FORMULAIRE DE CONTACT FORMSPREE -->
     <form class="formulaire" id="contact-form" action="https://formspree.io/f/xgaooenp" method="POST">
       <div class="champ">
         <label for="nom">Nom complet</label>
         <input type="text" id="nom" name="nom" required placeholder="Votre nom et prénom">
       </div>
 
-      <!-- DUO : TELEPHONE & EMAIL (PARTIE CLIENT MODIFIÉE) -->
       <div class="champs-duo">
         <div class="champ">
           <label for="telephone">Téléphone</label>
@@ -785,8 +773,8 @@
       </div>
 
       <button type="submit" class="btn btn-primaire" id="submit-btn">Envoyer ma demande</button>
-      
-      <!-- ZONE DE NOTIFICATION APRES ENVOI (RESTE SUR LA PAGE) -->
+
+      <!-- ZONE DE NOTIFICATION APRES ENVOI -->
       <div id="form-status"></div>
     </form>
   </div>
@@ -814,7 +802,49 @@
 
 <!-- ===== SCRIPTS ===== -->
 <script>
-  // 1. FAQ ACCORDEON
+  // 1. CHRONOMÈTRE DE DÉCOMPTE PERSISTANT (48 HEURES)
+  (function initChrono() {
+    const chronoEl = document.getElementById("chrono");
+    if (!chronoEl) return;
+
+    let targetTime = localStorage.getItem("promo_end_time");
+    if (!targetTime) {
+      targetTime = Date.now() + 48 * 60 * 60 * 1000;
+      localStorage.setItem("promo_end_time", targetTime);
+    } else {
+      targetTime = parseInt(targetTime, 10);
+    }
+
+    function updateChrono() {
+      const now = Date.now();
+      let diff = Math.max(0, Math.floor((targetTime - now) / 1000));
+
+      const hours = String(Math.floor(diff / 3600)).padStart(2, "0");
+      const minutes = String(Math.floor((diff % 3600) / 60)).padStart(2, "0");
+      const seconds = String(diff % 60).padStart(2, "0");
+
+      chronoEl.textContent = `${hours}:${minutes}:${seconds}`;
+
+      if (diff === 0) {
+        localStorage.removeItem("promo_end_time");
+      }
+    }
+
+    updateChrono();
+    setInterval(updateChrono, 1000);
+  })();
+
+  // 2. OMBRE SUR LA NAVBAR AU SCROLL
+  const navbar = document.getElementById("navbar");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 20) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+
+  // 3. FAQ ACCORDÉON
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(item => {
     const question = item.querySelector('.faq-question');
@@ -832,12 +862,12 @@
     });
   });
 
-  // 2. ENVOI DU FORMULAIRE VIA FETCH (FORMSPREE SANS REDIRECTION)
+  // 4. ENVOI DU FORMULAIRE VIA FETCH (FORMSPREE)
   const contactForm = document.getElementById("contact-form");
   const formStatus = document.getElementById("form-status");
 
   contactForm.addEventListener("submit", async function(e) {
-    e.preventDefault(); // Empêche la redirection vers Formspree
+    e.preventDefault();
 
     const data = new FormData(e.target);
     formStatus.innerHTML = "Envoi en cours...";
@@ -871,7 +901,7 @@
     }
   });
 
-  // 3. ANIMATION SCROLL FADE-UP
+  // 5. ANIMATION SCROLL FADE-UP
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
