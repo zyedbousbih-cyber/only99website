@@ -13,28 +13,27 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<!-- 🔧 POLICES : Changer les polices Google Fonts ici si besoin -->
+<!-- 🔧 POLICES : Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-  /* ===== VARIABLES DE COULEURS (TOUT LE SITE) ===== */
-  /* 🔧 COULEURS : Modifiez ici les couleurs principales du site */
+  /* ===== VARIABLES DE COULEURS ===== */
   :root {
-    --bleu: #1E5EFF;           /* 🔧 COULEUR : Bleu principal */
-    --bleu-vif: #0066FF;        /* 🔧 COULEUR : Bleu vif (boutons, accents) */
-    --bleu-fonce: #0A1B3D;      /* 🔧 COULEUR : Bleu foncé (textes titres) */
-    --bleu-nuit: #0D1F4C;       /* 🔧 COULEUR : Bleu nuit (footer) */
-    --bleu-clair: #EAF1FF;      /* 🔧 COULEUR : Bleu clair (fonds sections) */
-    --bleu-clair-2: #F5F8FF;    /* 🔧 COULEUR : Bleu très clair (hero) */
-    --blanc: #FFFFFF;           /* 🔧 COULEUR : Blanc */
-    --gris: #6B7A99;            /* 🔧 COULEUR : Gris textes secondaires */
-    --gris-clair: #C9D5F0;      /* 🔧 COULEUR : Gris clair (bordures) */
-    --ombre-bleue: 0 20px 40px -12px rgba(30, 94, 255, 0.25); /* 🔧 OMBRE */
-    --ombre-douce: 0 4px 20px rgba(10, 27, 61, 0.06);          /* 🔧 OMBRE */
-    --radius: 10px;              /* 🔧 FORME : Arrondi des boutons */
-    --radius-lg: 16px;          /* 🔧 FORME : Arrondi des cartes */
-    --ff-titre: 'Poppins', sans-serif;  /* 🔧 POLICE : Titres */
-    --ff-texte: 'Inter', sans-serif;    /* 🔧 POLICE : Textes */
+    --bleu: #1E5EFF;
+    --bleu-vif: #0066FF;
+    --bleu-fonce: #0A1B3D;
+    --bleu-nuit: #0D1F4C;
+    --bleu-clair: #EAF1FF;
+    --bleu-clair-2: #F5F8FF;
+    --blanc: #FFFFFF;
+    --gris: #6B7A99;
+    --gris-clair: #C9D5F0;
+    --ombre-bleue: 0 20px 40px -12px rgba(30, 94, 255, 0.25);
+    --ombre-douce: 0 4px 20px rgba(10, 27, 61, 0.06);
+    --radius: 10px;
+    --radius-lg: 16px;
+    --ff-titre: 'Poppins', sans-serif;
+    --ff-texte: 'Inter', sans-serif;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -49,7 +48,6 @@
   }
 
   h1, h2, h3, h4 { font-family: var(--ff-titre); font-weight: 700; line-height: 1.15; color: var(--bleu-fonce); }
-
   a { text-decoration: none; color: inherit; }
   ul { list-style: none; }
   img { max-width: 100%; display: block; }
@@ -64,4 +62,50 @@
     padding: 0 24px;
   }
 
-  .eyebrow-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip
+  /* ===== ANIMATIONS ===== */
+  @media (prefers-reduced-motion: no-preference) {
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-up.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* ===== BARRE D'ANNONCE ===== */
+  .bandeau {
+    position: sticky;
+    top: 0;
+    z-index: 60;
+    background: var(--bleu-vif);
+    color: var(--blanc);
+    text-align: center;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 9px 16px;
+  }
+  .bandeau strong { font-weight: 700; }
+
+  /* ===== NAVBAR ===== */
+  .navbar {
+    position: sticky;
+    top: 34px;
+    z-index: 50;
+    background: var(--blanc);
+    box-shadow: var(--ombre-douce);
+  }
+  .navbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+  .logo {
+    font-family: var(--ff-titre);
+    font-weight: 800;
+    font
